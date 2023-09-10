@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    dinaip:
+        container_name: dinaip
+        hostname: dinaip
+        restart: unless-stopped
+        environment:
+            - DHUSER=CuentaDinaHosting
+            - DHPASS=Password
+        volumes:
+            - 'config_host_folder:/var/persistent'
+        #command: [dinaip -a domain:a_record]
+        image: vrdominguez/dinaip
