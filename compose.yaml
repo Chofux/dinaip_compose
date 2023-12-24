@@ -9,5 +9,4 @@ services:
             - DHPASS=Password
         volumes:
             - 'config_host_folder:/var/persistent'
-        #command: [dinaip -a domain:a_record]
         image: vrdominguez/dinaip
